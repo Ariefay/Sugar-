@@ -102,12 +102,74 @@ body {
   display: none;
 }
 
+/* Slider Start */
+.images {
+  display: flex;
+  width: 100%;
+  transition: 2s;
+}
+
+.images img {
+  width: 100%;
+}
+
+.wrapper {
+  width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#Slide-1:target ~ .images {
+  margin-left: 0px;
+}
+
+#Slide-2:target ~ .images {
+  margin-left: -100%;
+}
+
+#Slide-3:target ~ .images {
+  margin-left: -200%;
+}
+
+#Slide-4:target ~ .images {
+  margin-left: -300%;
+}
+
+.SlideNav {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.SlideNav a {
+  display: inline-flex;
+  height: 25px;
+  width: 25px;
+  background-color: #dedede;
+  font-size: 0px;
+  border-radius: 20px;
+  margin: 3px;
+  transition: 1s;
+}
+
+.SlideNav a:hover {
+  background-color: dimgrey;
+}
+
+/* Slider End */
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../IMG/foto.jpeg");
+  /* background-image: url("../IMG/foto.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -257,8 +319,9 @@ body {
 
 /* Contact Section*/
 .contact h2 {
-  margin-top: 8rem;
-  margin-bottom: 2rem;
+  padding: 8rem 7% 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact .row {
@@ -354,6 +417,12 @@ footer .credit p {
 
 /* Media Queries */
 /* Resensif Break Point */
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
+}
 
 /* Laptop */
 @media (max-width: 1366px) {
