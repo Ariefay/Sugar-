@@ -136,7 +136,7 @@ body {
 #Slide-4:target ~ .images {
   margin-left: -300%;
 }
-
+/* A */
 .SlideNav {
   position: absolute;
   margin-left: auto;
